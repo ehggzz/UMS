@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner() {
+      return request.auth != null
+        && request.auth.uid == "OWNER_UID_REPLACE_ME";
+    }
+
+    match /orders/{orderId} {
+      // Public visitors can submit a new, tightly validated order only.
+      // They cannot read orders, change their status, or delete them.
+      allow create: if request.resource.data.keys().hasAll([
+          "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
+          "quantity", "details", "contactDiscord", "status", "createdAt"
+        ])
+        && request.resource.data.keys().hasOnly([
+          "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
+          "quantity", "details", "contactDiscord", "status", "createdAt"
+        ])
+        && request.resource.data.serviceId is string
+        && request.resource.data.serviceId.size() <= 80
+        && request.resource.data.serviceTitle is string
+        && request.resource.data.serviceTitle.size() <= 120
+        && request.resource.data.plan is string
+        && request.resource.data.plan.size() <= 120
+        && request.resource.data.tornUsername is string
+        && request.resource.data.tornUsername.size() >= 1
+        && request.resource.data.tornUsername.size() <= 40
+        && request.resource.data.tornId is string
+        && request.resource.data.tornId.size() <= 20
+        && request.resource.data.quantity is int
+        && request.resource.data.quantity >= 1
+        && request.resource.data.quantity <= 50
+        && request.resource.data.details is string
+        && request.resource.data.details.size() <= 2000
+        && request.resource.data.contactDiscord is string
+        && request.resource.data.contactDiscord.size() <= 100
+        && request.resource.data.status == "pending_review"
+        && request.resource.data.createdAt == request.time;
+
+      allow read, update, delete: if isOwner();
+    }
+  }
+}
