@@ -114,7 +114,7 @@ export default function AdminPage() {
         {error && <p className="formError" role="alert">{error}</p>}
         <div className="adminOrders">
           {orders.length === 0 ? <p className="emptyOrders">No orders loaded yet. Select “Refresh orders” to check the queue.</p> : orders.map((order) => <article className="adminOrder" key={order.id}>
-            <div className="adminOrderTop"><div><small>{order.id.slice(-8).toUpperCase()}</small><h2>{order.serviceTitle}</h2></div><span className={"statusPill status-" + order.status}>{(statuses.find(([value]) => value === order.status) || [order.status, order.status]).[1]}</span></div>
+            <div className="adminOrderTop"><div><small>{order.id.slice(-8).toUpperCase()}</small><h2>{order.serviceTitle}</h2></div><span className={"statusPill status-" + order.status}>{(statuses.find(([value]) => value === order.status) || [order.status, order.status])[1]}</span></div>
             <p><strong>Player:</strong> {order.tornUsername}{order.tornId ? " (ID " + order.tornId + ")" : ""}</p>
             <p><strong>Plan:</strong> {order.plan}</p>
             <p><strong>Quantity:</strong> {order.quantity}</p>
