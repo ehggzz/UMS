@@ -1,4 +1,19 @@
 {
-  "id":"/","name":"UMS — Unmatched Services","short_name":"UMS","description":"Torn City services, clearly priced.","start_url":"/","scope":"/","display":"standalone","background_color":"#090a0c","theme_color":"#0b0c0e",
-  "icons":[{"src":"/ums-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "id": "/",
+  "name": "UMS — Unmatched Services",
+  "short_name": "UMS",
+  "description": "Torn City services, clearly priced.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050806",
+  "theme_color": "#050806",
+  "icons": [
+    {
+      "src": "/ums-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
