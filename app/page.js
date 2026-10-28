@@ -52,8 +52,7 @@ const services = [
 ];
 
 function OrderButton({ serviceId }) {
-  const href = ORDER_LINKS[serviceId] || "#contact";
-  return <a className="orderButton" href={href}>{ORDER_LINKS[serviceId] ? "Order service" : "How to order"}<span>↗</span></a>;
+  return <a className="orderButton" href={"/order?service=" + serviceId}>Request service<span>↗</span></a>;
 }
 
 export default function Home() {
@@ -98,7 +97,7 @@ export default function Home() {
       <p className="priceNote">Prices are shown in in-game dollars unless stated otherwise. Custom services may require confirmation.</p>
     </section>
 
-    <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Ordering links and contact details will be added here once they're confirmed.</p></div><a className="primaryButton" href="#services">View pricing ↑</a></section>
+    <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Submit a service request for review. If accepted, UMS will provide payment instructions before you pay.</p></div><a className="primaryButton" href="#services">View pricing ↑</a></section>
 
     <footer><a href="#home"><strong>UMS</strong><span>UNMATCHED SERVICES</span></a><p>UMS is fan-made and is not affiliated with or endorsed by Torn City.</p><div className="footerLinks"><a href="/privacy">Privacy Policy</a><a href="/eula">EULA / Terms</a><a href="#home">Back to top ↑</a></div></footer>
   </main>;
