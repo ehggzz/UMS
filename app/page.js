@@ -1,6 +1,8 @@
 const ORDER_LINKS = {
   losses: "", escapes: "", bounties: "", mercenaries: "",
-  bountyReveals: "", loadoutReveals: "", battlestats: "", detectiveAgency: ""
+  "bounty-reveals": "", "loadout-reveals": "", battlestats: "",
+  "detective-agency": "", embargo: "", "productivity-boost": "",
+  meditation: "", "property-destruction": ""
 };
 
 const services = [
@@ -34,6 +36,18 @@ const services = [
     {name:"References",price:"$1,500,000",detail:"$1,410,000 to the agent · $90,000 UMS fee"},
     {name:"Flight Delay",price:"$15,000,000",detail:"$14,100,000 to the agent · $900,000 UMS fee"},
     {name:"Friend or Foe Reveal",price:"$24,000,000",detail:"$23,100,000 to the agent · $900,000 UMS fee"}
+  ]},
+  { id:"embargo", icon:"⚠", title:"Embargo", intro:"Embargo service, available to order.", accent:"green", plans:[
+    {name:"Embargo",price:"$4,750,000",detail:"$4,500,000 to the agent · $250,000 UMS fee"}
+  ]},
+  { id:"productivity-boost", icon:"📈", title:"Company Productivity Boost", intro:"Boost company productivity through an agent service.", accent:"blue", plans:[
+    {name:"Productivity boost",price:"$32,000,000",detail:"$30,000,000 to the agent · $2,000,000 UMS fee"}
+  ]},
+  { id:"meditation", icon:"✧", title:"Meditation — True Level Reveal", intro:"True level reveal through meditation.", accent:"purple", plans:[
+    {name:"True level reveal",price:"$103,000,000",detail:"$100,000,000 to the agent · $3,000,000 UMS fee"}
+  ]},
+  { id:"property-destruction", icon:"⌁", title:"Property Destruction", intro:"Property destruction service.", accent:"red", plans:[
+    {name:"Property destruction",price:"$2,000,000",detail:"Final service split to be confirmed"}
   ]}
 ];
 
