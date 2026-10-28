@@ -1,3 +1,5 @@
+import OwnerAdminLink from "./components/OwnerAdminLink";
+
 const services = [
   { id:"losses", icon:"✦", title:"Losses", intro:"Choose the plan that suits your needs.", accent:"orange", plans:[
     {name:"Standard Plan",price:"$400,000",unit:"per loss",detail:"$350,000 to the loss provider · $50,000 UMS fee"},
@@ -53,7 +55,7 @@ export default function Home() {
     <header className="topbar">
       <a className="brand" href="#home"><img src="/ums-logo.svg" alt="UMS — Unmatched Services" /><span>UNMATCHED<br/>SERVICES</span></a>
       <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#how-it-works">How it works</a><a href="#contact">Contact</a></nav>
-      <a className="topCta" href="#services">Browse services <span>→</span></a>
+      <OwnerAdminLink /><a className="topCta" href="#services">Browse services <span>→</span></a>
     </header>
 
     <section className="hero" id="home">
