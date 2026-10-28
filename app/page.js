@@ -86,6 +86,6 @@ export default function Home() {
 
     <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Ordering links and contact details will be added here once they're confirmed.</p></div><a className="primaryButton" href="#services">View pricing ↑</a></section>
 
-    <footer><a href="#home"><strong>UMS</strong><span>UNMATCHED SERVICES</span></a><p>UMS is fan-made and is not affiliated with or endorsed by Torn City.</p><a href="#home">Back to top ↑</a></footer>
+    <footer><a href="#home"><strong>UMS</strong><span>UNMATCHED SERVICES</span></a><p>UMS is fan-made and is not affiliated with or endorsed by Torn City.</p><div className="footerLinks"><a href="/privacy">Privacy Policy</a><a href="/eula">EULA / Terms</a><a href="#home">Back to top ↑</a></div></footer>
   </main>;
 }
