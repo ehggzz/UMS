@@ -21,7 +21,13 @@ export default function OwnerAdminLink() {
     });
   }, []);
 
-  if (!isOwner) return null;
-
-  return <Link className="topCta" href="/admin" aria-label="Open owner admin panel">Owner panel <span>↗</span></Link>;
+  return (
+    <Link
+      className="topCta"
+      href="/admin"
+      aria-label={isOwner ? "Open owner admin panel" : "Owner login"}
+    >
+      {isOwner ? "Owner panel" : "Owner login"} <span>↗</span>
+    </Link>
+  );
 }
