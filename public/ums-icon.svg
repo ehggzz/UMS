@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="100" fill="#101010"/><text x="256" y="330" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" letter-spacing="-20" fill="#ff9417">UMS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7ff9d"/>
+      <stop offset=".45" stop-color="#9cff32"/>
+      <stop offset="1" stop-color="#55e600"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="#050806"/>
+  <rect x="8" y="8" width="496" height="496" rx="94" fill="none" stroke="#294021" stroke-width="8"/>
+  <path d="M66 390h380" stroke="#7dff22" stroke-width="7" opacity=".7"/>
+  <text x="256" y="330" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" letter-spacing="-20" fill="url(#green)" filter="url(#glow)">UMS</text>
+</svg>
