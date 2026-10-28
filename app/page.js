@@ -1,10 +1,3 @@
-const ORDER_LINKS = {
-  losses: "", escapes: "", bounties: "", mercenaries: "",
-  "bounty-reveals": "", "loadout-reveals": "", battlestats: "",
-  "detective-agency": "", embargo: "", "productivity-boost": "",
-  meditation: "", "property-destruction": ""
-};
-
 const services = [
   { id:"losses", icon:"✦", title:"Losses", intro:"Choose the plan that suits your needs.", accent:"orange", plans:[
     {name:"Standard Plan",price:"$400,000",unit:"per loss",detail:"$350,000 to the loss provider · $50,000 UMS fee"},
