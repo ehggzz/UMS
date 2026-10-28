@@ -5,7 +5,7 @@ export const metadata = {
   description: "Torn City services, clearly priced.",
   applicationName: "UMS — Unmatched Services",
   manifest: "/manifest.json",
-  themeColor: "#0b0c0e",
+  themeColor: "#050806",
   appleWebApp: { capable: true, statusBarStyle: "black-translucent", title: "UMS" }
 };
 
