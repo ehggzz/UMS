@@ -55,7 +55,7 @@ export default function Home() {
     <header className="topbar">
       <a className="brand" href="#home"><img src="/ums-logo.svg" alt="UMS — Unmatched Services" /><span>UNMATCHED<br/>SERVICES</span></a>
       <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#how-it-works">How it works</a><a href="#contact">Contact</a></nav>
-      <OwnerAdminLink /><a className="topCta" href="#services">Browse services <span>→</span></a>
+      <a className="topCta" href="#services">Browse services <span>→</span></a>
     </header>
 
     <section className="hero" id="home">
@@ -95,5 +95,6 @@ export default function Home() {
     <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Submit a service request for review. If accepted, UMS will provide payment instructions before you pay.</p></div><a className="primaryButton" href="#services">View pricing ↑</a></section>
 
     <footer><a href="#home"><strong>UMS</strong><span>UNMATCHED SERVICES</span></a><p>UMS is fan-made and is not affiliated with or endorsed by Torn City.</p><div className="footerLinks"><a href="/privacy">Privacy Policy</a><a href="/eula">EULA / Terms</a><a href="#home">Back to top ↑</a></div></footer>
+    <div className="ownerAccess"><OwnerAdminLink /></div>
   </main>;
 }
