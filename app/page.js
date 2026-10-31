@@ -66,7 +66,7 @@ export default function Home() {
         <a className="primaryButton" href="#services">Explore services <span>↓</span></a>
         <small>UMS · UNMATCHED SERVICES</small>
       </div>
-      <div className="heroArt" aria-hidden="true"><div className="rings"/><strong>UMS<span>.</span></strong><label>BUILT FOR THE<br/>TORN CITY COMMUNITY</label></div>
+      <div className="heroArt"><img className="heroLogo" src="/unmatched-services.gif" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." /></div>
     </section>
 
     <section className="trustStrip" id="how-it-works">
