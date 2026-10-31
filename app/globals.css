@@ -57,3 +57,40 @@
 .heroLogo{-webkit-mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%);mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%)}
 
 .hero{background:radial-gradient(circle at 22% 48%,rgba(110,255,20,.17),transparent 32%),linear-gradient(120deg,#0b1609 0%,#071008 52%,#050806 100%)}.hero:after{right:auto;left:-100px}
+
+/* Landing page destinations */
+.landingHero{background:radial-gradient(circle at 22% 48%,rgba(110,255,20,.17),transparent 32%),linear-gradient(120deg,#0b1609 0%,#071008 52%,#050806 100%)}
+.landingActions{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+.secondaryHeroButton{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:13px 18px;border:1px solid #3a4a39;border-radius:7px;color:#e4ece2;font-size:11px;font-weight:800}
+.secondaryHeroButton:hover{border-color:var(--bright);color:var(--bright)}
+.landingChoices{max-width:1500px;margin:0 auto;padding:55px clamp(18px,5vw,72px) 75px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.landingChoice{min-height:205px;padding:24px;display:flex;flex-direction:column;border:1px solid #263228;border-top:2px solid var(--orange);border-radius:11px;background:linear-gradient(145deg,#0d130e,#090e0a);transition:transform .2s ease,border-color .2s ease}
+.landingChoice:hover{transform:translateY(-3px);border-color:#536b47}
+.landingChoice .eyebrow{margin-bottom:14px}.landingChoice h2{font-size:23px;letter-spacing:-.04em;margin:0 0 8px}.landingChoice h2 em{font-style:normal;color:var(--orange)}
+.landingChoice p{color:#9ba69b;font-size:11px;line-height:1.7;margin:0 0 18px}.choiceArrow{margin-top:auto;color:var(--bright);font-size:10px;font-weight:800}
+.eventsIntro,.accountIntro{max-width:900px;margin:0 auto;padding:58px 24px 34px;text-align:center}
+.eventsIntro h1,.accountIntro h1{font-size:clamp(38px,6vw,62px);line-height:1;letter-spacing:-.055em;margin:0 0 15px}
+.eventsIntro h1 em,.accountIntro h1 em{font-style:normal;color:var(--orange)}
+.eventsIntro>p:last-child,.accountIntro>p:last-child{color:#aab5a8;font-size:13px;line-height:1.7}
+.eventTbc{max-width:900px;margin:0 auto 50px;padding:28px;display:flex;align-items:center;gap:22px;border:1px solid #2a392b;border-left:2px solid var(--orange);border-radius:11px;background:linear-gradient(145deg,#0d130e,#090e0a)}
+.eventTbc>div{flex:1}.eventTbc .eyebrow{margin-bottom:9px}.eventTbc h2{font-size:22px;margin:0 0 8px}.eventTbc p:last-child{max-width:540px;color:#9ba69b;font-size:11px;line-height:1.7;margin:0}
+.eventIcon{width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;border:1px solid rgba(141,255,34,.45);border-radius:10px;color:var(--bright);font-size:24px;background:rgba(141,255,34,.07)}
+.eventsBack{max-width:900px;margin:0 auto 50px;padding:0 24px;color:var(--bright);font-size:11px;font-weight:800}
+.accountIntro{padding-bottom:22px}.accountCard,.accountDashboard{width:min(760px,calc(100% - 36px));margin:0 auto 55px}
+.accountCard h2{font-size:28px;margin:0 0 22px}.accountCard .orderForm{margin-top:22px}
+.accountLinks{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px}
+.accountLinks button{padding:0;border:0;background:none;color:var(--bright);font:700 11px Inter,system-ui,sans-serif;cursor:pointer}
+.accountLinks button:hover{text-decoration:underline}
+.accountFinePrint,.accountHint{color:#849083;font-size:10px;line-height:1.7}
+.accountDashboard{padding:28px;border:1px solid #29382b;border-radius:12px;background:linear-gradient(145deg,#0d130e,#090e0a)}
+.accountDashboardHeader{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:19px;border-bottom:1px solid #253027;margin-bottom:20px}
+.accountDashboardHeader .eyebrow{margin-bottom:8px}.accountDashboardHeader h2{font-size:19px;overflow-wrap:anywhere;margin:0 0 6px}.accountDashboardHeader p:last-child{color:#9ba69b;font-size:11px;margin:0}
+.accountOrderList{display:grid;gap:12px}.accountOrder{padding:17px;border:1px solid #29352b;border-radius:9px;background:rgba(0,0,0,.15)}
+.accountOrderHeader{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:13px}.accountOrderHeader small{color:#849083;font-size:9px;font-weight:800;letter-spacing:.1em}.accountOrderHeader h3{font-size:15px;margin:5px 0 0}
+.accountOrder>p{color:#aab5a8;font-size:10px;line-height:1.6;margin:6px 0}.accountOrder>p strong{color:#e2e9df}
+.statusPill{display:inline-flex;padding:5px 8px;border:1px solid #384638;border-radius:999px;color:var(--bright);font-size:9px;font-weight:800;white-space:nowrap}
+.accountPaymentStatus{color:var(--bright)!important}
+.accountEmpty{padding:25px 10px;text-align:center;color:#9ba69b}.accountEmpty h3{color:var(--text);font-size:17px}.accountEmpty p{font-size:11px;line-height:1.7;max-width:520px;margin:0 auto 18px}
+.accountHint{margin:0 0 18px}.accountHint a{color:var(--bright);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){.landingChoices{grid-template-columns:1fr;max-width:560px;padding-top:35px}.landingChoice{min-height:170px}.eventTbc{margin-left:18px;margin-right:18px;flex-wrap:wrap}.eventTbc .discordButton{width:100%}}
+@media(max-width:560px){.landingActions{align-items:stretch;flex-direction:column}.landingActions>*{width:100%}.eventTbc{padding:20px;gap:14px}.eventIcon{width:40px;height:40px;flex-basis:40px}.eventTbc>div{flex-basis:calc(100% - 60px)}.eventTbc>.discordButton{flex-basis:100%}.accountDashboard{padding:20px}.accountDashboardHeader,.accountOrderHeader{align-items:flex-start;flex-direction:column}.accountDashboardHeader .secondaryButton{width:100%}}
