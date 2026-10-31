@@ -17,13 +17,13 @@ export default function PrivacyPolicy() {
       <p className="legalLead">This policy explains how UMS — Unmatched Services (“UMS”, “we”, “us” or “our”) handles information when you visit this website or contact us about a service.</p>
       <p className="legalUpdated">Last updated: 31 October 2026</p>
 
-      <div className="legalNotice"><strong>Pre-launch note</strong><p>The website offers email sign-in and account-linked service request tracking. Payments are arranged outside the website; UMS does not collect card details through the site. Orders submitted while signed out are not linked to a later account.</p></div>
+      <div className="legalNotice"><strong>Pre-launch note</strong><p>The website accepts service requests for review. Customer account sign-in using Torn API keys and order tracking are planned, but are not currently available. Payments are arranged outside the website; UMS does not collect card details through the site.</p></div>
 
       <h2>1. Who is responsible for your information?</h2>
       <p>UMS is the operator of this fan-made service directory. UMS is not affiliated with, endorsed by, or operated by Torn City. Before this policy is used for live service orders, UMS’s operator contact details must be added here so you can contact us about your information.</p>
 
       <h2>2. Information we may handle</h2>
-      <p>The website lets visitors create an account using an email address and password, and submit service requests. Account details are handled by Firebase Authentication. Service requests may include your Torn username and ID, selected service and plan, quantity, request details and Discord contact. When you submit while signed in, the order is linked to your account so you can see its status and any payment instructions. Requests submitted while signed out are not automatically linked to a later account.</p>
+      <p>The website displays services, prices and event information, and lets visitors submit service requests. It does not currently offer customer account registration or sign-in. A future account feature using Torn API keys is being considered, but no API keys should be submitted to the site at this time. A service request may include your Torn username and ID, selected service and plan, quantity, request details and Discord contact. Do not enter passwords, API keys or payment card details in a service request.</p>
       <p>When you visit a website, the hosting and security services that deliver it may process technical information such as your IP address, browser/device details, requested pages, timestamps and security logs. If you contact UMS through an external platform, we may receive the account name, messages, order details and other information you choose to share there.</p>
       <p>Please do not send passwords, payment card details, or personal information that is not needed to discuss a service.</p>
 
@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
       <p>We will only use personal information where a lawful basis applies. Depending on the circumstances, this may be taking steps at your request before entering an agreement, performing an agreement, complying with a legal obligation, or pursuing legitimate interests such as site security and handling enquiries.</p>
 
       <h2>4. Who may receive information?</h2>
-      <p>Technical information may be processed by website hosting or infrastructure providers. Firebase Authentication and Cloud Firestore (Google) process account and service-request information to provide sign-in, order submission and account order history. If you arrange a service through a separate platform, that platform will also handle information under its own terms and privacy policy. Where a service requires a separate provider or agent, relevant order details may need to be shared with them to fulfil the request. We will explain material sharing at the point of ordering where appropriate.</p>
+      <p>Technical information may be processed by website hosting or infrastructure providers. Firebase Authentication is used for restricted owner administration, and Cloud Firestore (Google) processes submitted service requests. If you contact UMS or arrange a service through a separate platform, that platform will also handle information under its own terms and privacy policy. Where a service requires a separate provider or agent, relevant order details may need to be shared with them to fulfil the request. We will explain material sharing at the point of ordering where appropriate.</p>
       <p>We do not sell personal information. We may disclose information if required by law or where reasonably necessary to protect rights, safety or the security of the service.</p>
 
       <h2>5. Cookies, analytics and external content</h2>
