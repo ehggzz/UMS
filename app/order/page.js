@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { auth, db, firebaseConfigured, firebaseConfigMissing } from "../../lib/firebase";
+import { db, firebaseConfigured, firebaseConfigMissing } from "../../lib/firebase";
 
 const services = [
   { id: "losses", title: "Losses", plans: ["Standard Plan — $400,000 per loss", "Priority Plan — $450,000 per loss"] },
@@ -67,7 +67,6 @@ export default function OrderPage() {
         quantity: Number(quantity),
         details: details.trim(),
         contactDiscord: contactDiscord.trim(),
-        ...(auth && auth.currentUser ? { userId: auth.currentUser.uid } : {}),
         status: "pending_review",
         createdAt: serverTimestamp(),
       });
@@ -97,7 +96,6 @@ export default function OrderPage() {
         <p className="eyebrow">UMS SERVICE REQUEST</p>
         <h1>Request a <em>service.</em></h1>
         <p className="workflowLead">Send your request to UMS for review. This does not automatically accept your order, and you should not pay until UMS has accepted it and provided instructions.</p>
-        <p className="accountHint">Sign in to your <Link href="/account">UMS account</Link> before submitting if you want to track this request. Guest requests cannot be linked to an account later.</p>
         {!firebaseConfigured && <div className="workflowNotice"><strong>Setup still in progress</strong><p>The website is waiting for its Firebase environment variables. The form won't submit until the connection is configured.</p><small>Missing: {firebaseConfigMissing.join(", ")}</small></div>}
         <form className="orderForm" onSubmit={submitOrder}>
           <label>Service
