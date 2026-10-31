@@ -98,7 +98,7 @@ export default function Home() {
       <p className="priceNote">Prices are shown in in-game dollars unless stated otherwise. Custom services may require confirmation.</p>
     </section>
 
-    <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Submit a service request for review. If accepted, UMS will provide payment instructions before you pay.</p></div><a className="primaryButton" href="#services">View pricing ↑</a></section>
+    <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a service?</h2><p>Submit a service request for review. If accepted, UMS will provide payment instructions before you pay.</p></div><div className="contactActions"><a className="primaryButton" href="#services">View pricing ↑</a><a className="discordButton" href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Join the UMS Discord <span aria-hidden="true">↗</span></a></div></section>
 
     <footer><a href="#home"><strong>UMS</strong><span>UNMATCHED SERVICES</span></a><p>UMS is fan-made and is not affiliated with or endorsed by Torn City.</p><div className="footerLinks"><a href="/privacy">Privacy Policy</a><a href="/eula">EULA / Terms</a><a href="#home">Back to top ↑</a></div></footer>
     <div className="ownerAccess"><OwnerAdminLink /></div>
