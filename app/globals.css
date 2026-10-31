@@ -44,3 +44,6 @@
 .serviceDetails{padding:0 22px 21px 77px}
 .serviceDetails .priceList{margin-bottom:15px}
 @media(max-width:560px){.serviceSummary{grid-template-columns:38px minmax(0,1fr) 22px;gap:11px;padding:14px 13px}.serviceSummary .serviceIcon{width:38px;height:38px}.categoryNumber{display:none}.summaryTitle{font-size:13px}.summaryIntro{font-size:9px}.serviceDetails{padding:0 13px 16px 62px}.priceRow strong{font-size:18px}}
+
+@media(min-width:561px){.serviceGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.serviceCard[open]{grid-column:1/-1}}
+
