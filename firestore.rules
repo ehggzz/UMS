@@ -11,8 +11,10 @@ service cloud.firestore {
       // They cannot read orders, change their status, or delete them.
       allow create: if request.resource.data.keys().hasAll([
           "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
-          "quantity", "details", "contactDiscord", "status", "createdAt"
+          "quantity", "details", "contactDiscord", "status", "createdAt", "userId"
         ])
+        && (!request.resource.data.keys().hasAny(["userId"])
+          || (request.auth != null && request.resource.data.userId == request.auth.uid))
         && request.resource.data.keys().hasOnly([
           "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
           "quantity", "details", "contactDiscord", "status", "createdAt"
@@ -38,7 +40,8 @@ service cloud.firestore {
         && request.resource.data.status == "pending_review"
         && request.resource.data.createdAt == request.time;
 
-      allow read, update, delete: if isOwner();
+      allow read: if isOwner() || (request.auth != null && resource.data.userId == request.auth.uid);
+      allow update, delete: if isOwner();
     }
   }
 }
