@@ -54,7 +54,7 @@ export default function Home() {
   return <main>
     <header className="topbar">
       <a className="brand" href="/"><img src="/ums-logo.svg" alt="UMS — Unmatched Services" /><span>UNMATCHED<br/>SERVICES</span></a>
-      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/events">Events</a><a href="/account">Account</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/services" aria-current="page">Services</a><a href="/events">Events</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
       <a className="topCta" href="#services">Browse services <span>→</span></a>
     </header>
 
