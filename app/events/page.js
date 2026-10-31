@@ -7,7 +7,7 @@ export default function EventsPage() {
   return <main className="workflowPage eventsPage">
     <header className="topbar">
       <a className="brand" href="/"><img src="/ums-logo.svg" alt="UMS — Unmatched Services" /><span>UNMATCHED<br/>SERVICES</span></a>
-      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/events" aria-current="page">Events</a><a href="/account">Account</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/events" aria-current="page">Events</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
       <a className="topCta" href="/account">My account <span>→</span></a>
     </header>
     <section className="eventsIntro">
