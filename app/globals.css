@@ -94,3 +94,25 @@
 .accountHint{margin:0 0 18px}.accountHint a{color:var(--bright);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.landingChoices{grid-template-columns:1fr;max-width:560px;padding-top:35px}.landingChoice{min-height:170px}.eventTbc{margin-left:18px;margin-right:18px;flex-wrap:wrap}.eventTbc .discordButton{width:100%}}
 @media(max-width:560px){.landingActions{align-items:stretch;flex-direction:column}.landingActions>*{width:100%}.eventTbc{padding:20px;gap:14px}.eventIcon{width:40px;height:40px;flex-basis:40px}.eventTbc>div{flex-basis:calc(100% - 60px)}.eventTbc>.discordButton{flex-basis:100%}.accountDashboard{padding:20px}.accountDashboardHeader,.accountOrderHeader{align-items:flex-start;flex-direction:column}.accountDashboardHeader .secondaryButton{width:100%}}
+
+/* Member and request workflow controls */
+.workflowPage{min-height:100vh;padding-bottom:20px;background:radial-gradient(circle at 82% 5%,rgba(110,255,20,.08),transparent 28%),var(--bg)}
+.workflowHeader{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px clamp(18px,5vw,72px);background:rgba(5,8,6,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.workflowBrand{display:flex;flex-direction:column;color:var(--bright);font:900 28px/1 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.06em}.workflowBrand>span{display:inline;color:var(--orange)}.workflowBrand small{margin-top:5px;color:#b4bdb4;font:800 7px/1.4 Inter,system-ui,sans-serif;letter-spacing:.16em}
+.workflowBack{color:#d3dfd0;font-size:10px;font-weight:800}.workflowBack:hover,.workflowFooter a:hover{color:var(--bright)}
+.workflowCard{width:min(680px,calc(100% - 36px));margin:42px auto 60px;padding:clamp(22px,5vw,38px);border:1px solid #29382b;border-radius:12px;background:linear-gradient(145deg,#0d130e,#090e0a);box-shadow:0 18px 50px rgba(0,0,0,.22)}
+.workflowCard h1{font-size:clamp(34px,6vw,52px);letter-spacing:-.05em;margin:0 0 14px}.workflowCard h1 em{font-style:normal;color:var(--orange)}.workflowCard>p{color:#aab5a8;font-size:12px;line-height:1.75}
+.orderForm{display:grid;gap:15px;margin-top:24px}.orderForm label{display:grid;gap:7px;color:#dbe3d8;font-size:11px;font-weight:700}.orderForm label>span{color:var(--orange)}
+.orderForm input:not([type=checkbox]),.orderForm select,.orderForm textarea{width:100%;padding:12px 13px;border:1px solid #374538;border-radius:7px;background:#080d09;color:var(--text);font:500 12px Inter,system-ui,sans-serif}
+.orderForm input:focus,.orderForm select:focus,.orderForm textarea:focus{outline:2px solid rgba(141,255,34,.55);outline-offset:1px;border-color:var(--orange)}
+.orderForm textarea{resize:vertical;min-height:100px}.orderForm input[type=checkbox]{accent-color:var(--orange)}
+.orderForm label small{color:#839082;font-size:9px;font-weight:500;line-height:1.6}
+.formColumns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.agreementCheck{display:flex!important;align-items:flex-start;gap:9px!important;line-height:1.6}.agreementCheck input{margin-top:2px}
+.formSubmit{width:100%;border:0;cursor:pointer}.formSubmit:disabled{opacity:.55;cursor:not-allowed}
+.formError,.formSuccess{padding:11px 13px;border-radius:7px;font-size:11px;line-height:1.6}.formError{border:1px solid #744141;background:rgba(160,45,45,.1);color:#ffc1b7}.formSuccess{border:1px solid #385a2d;background:rgba(100,180,40,.08);color:#d4f8b9}
+.workflowNotice{padding:15px 16px;margin:18px 0;border:1px solid #3a482f;border-left:3px solid var(--orange);border-radius:8px;background:rgba(141,255,34,.045)}.workflowNotice strong{display:block;color:var(--bright);font-size:11px;margin-bottom:6px}.workflowNotice p{color:#b5c0b2;font-size:10px;line-height:1.7;margin:0}.workflowNotice small{display:block;margin-top:8px;color:#8a9587;font-size:9px;overflow-wrap:anywhere}
+.secondaryButton{padding:10px 13px;border:1px solid #465548;border-radius:7px;background:#101710;color:#e3ebe0;font:800 10px Inter,system-ui,sans-serif;cursor:pointer}.secondaryButton:hover{border-color:var(--orange);color:var(--bright)}
+.workflowFooter{width:min(900px,calc(100% - 36px));margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;padding:20px 0;border-top:1px solid #202a21;color:#869083;font-size:10px;font-weight:700}
+.accountCard .workflowNotice{margin-top:0}.accountCard .discordButton{width:100%}
+.orderReference{display:grid;gap:6px;padding:16px;margin:18px 0;border:1px solid #33432e;border-radius:8px;background:rgba(141,255,34,.05)}.orderReference small{color:#a7b29f;font-size:9px;letter-spacing:.12em}.orderReference strong{color:var(--bright);font-size:22px;letter-spacing:.06em}
+@media(max-width:600px){.workflowHeader{padding:13px 18px}.workflowBack{font-size:9px}.formColumns{grid-template-columns:1fr}.workflowFooter{gap:14px}.workflowCard{margin-top:26px}}
