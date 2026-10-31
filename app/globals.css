@@ -116,3 +116,5 @@
 .accountCard .workflowNotice{margin-top:0}.accountCard .discordButton{width:100%}
 .orderReference{display:grid;gap:6px;padding:16px;margin:18px 0;border:1px solid #33432e;border-radius:8px;background:rgba(141,255,34,.05)}.orderReference small{color:#a7b29f;font-size:9px;letter-spacing:.12em}.orderReference strong{color:var(--bright);font-size:22px;letter-spacing:.06em}
 @media(max-width:600px){.workflowHeader{padding:13px 18px}.workflowBack{font-size:9px}.formColumns{grid-template-columns:1fr}.workflowFooter{gap:14px}.workflowCard{margin-top:26px}}
+
+.accountComingActions{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:22px}.accountComingActions .discordButton,.accountComingActions .secondaryHeroButton{min-width:200px}.accountComingSoon>p:not(.eyebrow){max-width:590px}@media(max-width:560px){.accountComingActions{flex-direction:column;align-items:stretch}.accountComingActions>*{width:100%}}
