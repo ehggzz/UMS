@@ -78,16 +78,22 @@ export default function Home() {
     <section className="servicesSection" id="services">
       <div className="sectionHeading"><p className="eyebrow">THE SERVICE DIRECTORY</p><h2>Find your <em>service.</em></h2><p>Browse our current services and pricing below.</p></div>
       <div className="serviceGrid">
-        {services.map((service,index)=><article className={`serviceCard ${service.accent}`} id={service.id} key={service.id}>
-          <div className="cardTop"><div className="serviceIcon">{service.icon}</div><span>{String(index+1).padStart(2,"0")}</span></div>
-          <h3>{service.title}</h3><p className="intro">{service.intro}</p>
-          <div className="priceList">{service.plans.map(plan=><div className="priceRow" key={plan.name}>
-            <div className="planName">{plan.name}{plan.featured && <mark>PRIORITY</mark>}</div>
-            <strong>{plan.price}</strong>{plan.unit && <small>{plan.unit}</small>}{plan.detail && <p>{plan.detail}</p>}
-          </div>)}</div>
-          {service.note && <p className="note">{service.note}</p>}
-          <OrderButton serviceId={service.id}/>
-        </article>)}
+        {services.map((service,index)=><details className={`serviceCard ${service.accent}`} id={service.id} key={service.id}>
+          <summary className="serviceSummary">
+            <span className="serviceIcon" aria-hidden="true">{service.icon}</span>
+            <span className="summaryCopy"><span className="summaryTitle">{service.title}</span><span className="summaryIntro">{service.intro}</span></span>
+            <span className="categoryNumber">{String(index+1).padStart(2,"0")}</span>
+            <span className="disclosureIcon" aria-hidden="true" />
+          </summary>
+          <div className="serviceDetails">
+            <div className="priceList">{service.plans.map(plan=><div className="priceRow" key={plan.name}>
+              <div className="planName">{plan.name}{plan.featured && <mark>PRIORITY</mark>}</div>
+              <strong>{plan.price}</strong>{plan.unit && <small>{plan.unit}</small>}{plan.detail && <p>{plan.detail}</p>}
+            </div>)}</div>
+            {service.note && <p className="note">{service.note}</p>}
+            <OrderButton serviceId={service.id}/>
+          </div>
+        </details>)}
       </div>
       <p className="priceNote">Prices are shown in in-game dollars unless stated otherwise. Custom services may require confirmation.</p>
     </section>
