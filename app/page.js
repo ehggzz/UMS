@@ -22,12 +22,6 @@ export default function Home() {
       <div className="heroArt"><img className="heroLogo" src="/unmatched-services.gif" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." /></div>
     </section>
 
-    <section className="trustStrip">
-      <div><b>◈</b><strong>Clear pricing</strong><p>Browse service options and fees.</p></div>
-      <div><b>↗</b><strong>UMS events</strong><p>Find event details as they are announced.</p></div>
-      <div><b>◎</b><strong>Order updates</strong><p>Ask UMS for request and payment progress.</p></div>
-    </section>
-
     <section className="landingChoices" aria-label="Explore UMS">
       <a className="landingChoice" href="/services"><span className="eyebrow">01 · PAID SERVICES</span><h2>Find your <em>service.</em></h2><p>Browse the full directory, compare prices and send a request.</p><span className="choiceArrow">Explore services ↗</span></a>
       <a className="landingChoice" href="/events"><span className="eyebrow">02 · UMS EVENTS</span><h2>See what’s <em>coming up.</em></h2><p>Check confirmed events and read the details in one place.</p><span className="choiceArrow">View events ↗</span></a>
