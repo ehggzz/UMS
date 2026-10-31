@@ -53,3 +53,5 @@
 .heroLogo{display:block;position:relative;z-index:1;width:min(100%,390px);height:auto;object-fit:contain;filter:drop-shadow(0 15px 34px rgba(86,255,0,.2))}@media(max-width:800px){.heroArt{right:-24px;top:65px;width:min(48%,250px);opacity:.34}}
 
 .heroLogo{-webkit-mask-image:radial-gradient(ellipse 82% 82% at center,#000 50%,rgba(0,0,0,.96) 63%,rgba(0,0,0,.7) 76%,transparent 100%);mask-image:radial-gradient(ellipse 82% 82% at center,#000 50%,rgba(0,0,0,.96) 63%,rgba(0,0,0,.7) 76%,transparent 100%)}
+
+.heroLogo{-webkit-mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%);mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%)}
