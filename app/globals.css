@@ -49,3 +49,5 @@
 
 
 .contactActions{display:flex;align-items:center;gap:10px;flex-shrink:0}.contactActions .primaryButton{white-space:nowrap}.discordButton{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:13px 17px;border:1px solid #465548;border-radius:7px;color:var(--bright);font-size:11px;font-weight:800;white-space:nowrap}.discordButton span{font-size:15px;color:var(--orange)}.discordButton:hover{border-color:var(--orange);background:rgba(141,255,34,.06)}@media(max-width:800px){.contactActions{width:100%;flex-direction:column;align-items:stretch}.contactActions .primaryButton,.contactActions .discordButton{width:100%}}
+
+.heroLogo{display:block;position:relative;z-index:1;width:min(100%,390px);height:auto;object-fit:contain;filter:drop-shadow(0 15px 34px rgba(86,255,0,.2))}@media(max-width:800px){.heroArt{right:-24px;top:65px;width:min(48%,250px);opacity:.34}}
