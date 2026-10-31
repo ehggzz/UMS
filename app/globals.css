@@ -55,3 +55,5 @@
 .heroLogo{-webkit-mask-image:radial-gradient(ellipse 82% 82% at center,#000 50%,rgba(0,0,0,.96) 63%,rgba(0,0,0,.7) 76%,transparent 100%);mask-image:radial-gradient(ellipse 82% 82% at center,#000 50%,rgba(0,0,0,.96) 63%,rgba(0,0,0,.7) 76%,transparent 100%)}
 
 .heroLogo{-webkit-mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%);mask-image:radial-gradient(ellipse 72% 72% at center,#000 42%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.62) 72%,transparent 96%)}
+
+.hero{background:radial-gradient(circle at 22% 48%,rgba(110,255,20,.17),transparent 32%),linear-gradient(120deg,#0b1609 0%,#071008 52%,#050806 100%)}.hero:after{right:auto;left:-100px}
