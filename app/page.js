@@ -19,7 +19,7 @@ export default function Home() {
         </div>
         <small>UMS · UNMATCHED SERVICES</small>
       </div>
-      <div className="heroArt"><img className="heroLogo" src="/unmatched-services.gif" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." /></div>
+      <div className="heroArt"><img className="heroLogo" src="/unmatched-services.png" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." /></div>
     </section>
 
     <section className="landingChoices" aria-label="Explore UMS">
