@@ -139,3 +139,42 @@
  .hero.landingHero.imageOnlyHero .heroArt{width:100%!important;min-height:0}
  .hero.landingHero.imageOnlyHero .heroLogo{width:min(100%,360px);max-height:none}
 }
+
+
+/* UMS Achievement Finder */
+.achievementIntro{max-width:920px;margin:0 auto;padding:62px 24px 28px;text-align:center}
+.achievementIntro h1{font-size:clamp(42px,7vw,68px);line-height:1;letter-spacing:-.055em;margin:0 0 16px}
+.achievementIntro h1 em{font-style:normal;color:var(--orange)}
+.achievementIntro>p:not(.eyebrow){max-width:700px;margin:0 auto;color:#aab5a8;font-size:13px;line-height:1.8}
+.achievementLegend{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:22px;color:#aab5a8;font-size:10px;font-weight:700}
+.achievementLegend span{display:flex;align-items:center;gap:7px}
+.supportDot{width:8px;height:8px;border-radius:50%;display:inline-block}.supportDot.indirect{background:#c7ff73}.supportDot.direct{background:#75d9ff}
+.achievementFinder{width:min(1120px,calc(100% - 36px));margin:0 auto 64px}
+.achievementFilters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:18px;border:1px solid #29382b;border-radius:11px;background:linear-gradient(145deg,#0d130e,#090e0a)}
+.achievementFilters label{display:grid;gap:7px;color:#dbe3d8;font-size:10px;font-weight:800}
+.achievementFilters select,.achievementFilters input{width:100%;min-width:0;padding:11px 12px;border:1px solid #374538;border-radius:7px;background:#080d09;color:var(--text);font:500 11px Inter,system-ui,sans-serif}
+.achievementFilters select:focus,.achievementFilters input:focus{outline:2px solid rgba(141,255,34,.5);outline-offset:1px}
+.achievementResultsHeading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:23px 2px 12px;color:#dbe3d8;font-size:11px}
+.achievementResultsHeading button{border:0;background:none;color:var(--bright);font:700 10px Inter,system-ui,sans-serif;cursor:pointer}
+.achievementList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.achievementCard{padding:19px;border:1px solid #29382b;border-left:2px solid var(--orange);border-radius:9px;background:linear-gradient(145deg,#0d130e,#090e0a)}
+.achievementCardTop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.achievementType{color:#9ba69b;font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.achievementCard h2{font-size:18px;margin:6px 0 0;letter-spacing:-.025em}
+.supportTag{flex-shrink:0;padding:5px 8px;border:1px solid #405332;border-radius:99px;color:var(--bright);font-size:8px;font-weight:800;white-space:nowrap}
+.supportTag.direct{border-color:#31536a;color:#8bd7ff}
+.achievementRequirement{margin:13px 0 6px;color:#f0f5ec;font-size:12px;font-weight:800}
+.achievementExplanation{margin:0;color:#aab5a8;font-size:10px;line-height:1.7}
+.achievementServices{margin-top:16px;padding-top:12px;border-top:1px solid #263228}
+.achievementServices>small{color:#7f8c7e;font-size:8px;font-weight:900;letter-spacing:.13em}
+.achievementServices>div{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.achievementServices a{padding:7px 9px;border:1px solid #394638;border-radius:6px;color:var(--bright);font-size:9px;font-weight:800}
+.achievementServices a:hover{border-color:var(--orange);background:rgba(141,255,34,.05)}
+.achievementDisclaimer{margin-top:18px;padding:17px 19px;border:1px solid #35452d;border-left:3px solid var(--orange);border-radius:8px;background:rgba(141,255,34,.04)}
+.achievementDisclaimer strong{display:block;margin-bottom:7px;color:var(--bright);font-size:11px}
+.achievementDisclaimer p{margin:5px 0;color:#aab5a8;font-size:10px;line-height:1.75}
+.achievementDisclaimer small{display:block;margin-top:10px;color:#7f8c7e;font-size:9px}
+.achievementEmpty{grid-column:1/-1;padding:36px 20px;text-align:center;border:1px dashed #35452d;border-radius:9px;color:#aab5a8}
+.achievementEmpty h2{margin-bottom:7px;color:var(--text);font-size:18px}.achievementEmpty p{margin:0;font-size:11px}
+@media(max-width:800px){.achievementFilters{grid-template-columns:repeat(2,minmax(0,1fr))}.achievementList{grid-template-columns:1fr}.achievementIntro{padding-top:45px}}
+@media(max-width:520px){.achievementFilters{grid-template-columns:1fr}.achievementLegend{gap:14px}.achievementFinder{width:calc(100% - 28px)}.achievementCardTop{gap:8px}.achievementCard h2{font-size:16px}}
