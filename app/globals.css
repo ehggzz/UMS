@@ -129,3 +129,13 @@
   .imageOnlyHero .heroArt{position:relative;right:auto;top:auto;width:100%;min-height:0;opacity:1}
   .imageOnlyHero .heroLogo{width:min(100%,360px);max-height:none}
 }
+
+
+/* Explicitly centre the image-only hero artwork across all breakpoints. */
+.hero.landingHero.imageOnlyHero{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center}
+.hero.landingHero.imageOnlyHero .heroArt{position:relative!important;inset:auto!important;right:auto!important;top:auto!important;left:auto!important;grid-column:1/-1;width:100%!important;max-width:100%;margin-inline:auto;display:grid;place-items:center;justify-self:center;opacity:1}
+.hero.landingHero.imageOnlyHero .heroLogo{display:block;width:min(100%,460px);height:auto;max-height:420px;object-fit:contain;margin-inline:auto;justify-self:center}
+@media(max-width:800px){
+ .hero.landingHero.imageOnlyHero .heroArt{width:100%!important;min-height:0}
+ .hero.landingHero.imageOnlyHero .heroLogo{width:min(100%,360px);max-height:none}
+}
