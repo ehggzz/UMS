@@ -8,18 +8,10 @@ export default function Home() {
       <a className="topCta" href="/account">My account <span>→</span></a>
     </header>
 
-    <section className="hero landingHero" id="home">
-      <div className="heroContent">
-        <p className="eyebrow"><i/> TORN CITY COMMUNITY SERVICES</p>
-        <h1>Services, events<br/><em>and community.</em></h1>
-        <p className="heroCopy">Find paid services, see upcoming UMS events, and keep track of your requests in one place.</p>
-        <div className="landingActions">
-          <a className="primaryButton" href="/services">Explore services <span>→</span></a>
-          <a className="secondaryHeroButton" href="/events">Events <span>→</span></a>
-        </div>
-        <small>UMS · UNMATCHED SERVICES</small>
+    <section className="hero landingHero imageOnlyHero" id="home" aria-label="Unmatched Services">
+      <div className="heroArt">
+        <img className="heroLogo" src="/unmatched-services.png" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." />
       </div>
-      <div className="heroArt"><img className="heroLogo" src="/unmatched-services.png" alt="Unmatched Services emblem with a masked figure, crossed rifles, money and green growth bars." /></div>
     </section>
 
     <section className="landingChoices" aria-label="Explore UMS">
