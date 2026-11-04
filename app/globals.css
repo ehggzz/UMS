@@ -118,3 +118,14 @@
 @media(max-width:600px){.workflowHeader{padding:13px 18px}.workflowBack{font-size:9px}.formColumns{grid-template-columns:1fr}.workflowFooter{gap:14px}.workflowCard{margin-top:26px}}
 
 .accountComingActions{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:22px}.accountComingActions .discordButton,.accountComingActions .secondaryHeroButton{min-width:200px}.accountComingSoon>p:not(.eyebrow){max-width:590px}@media(max-width:560px){.accountComingActions{flex-direction:column;align-items:stretch}.accountComingActions>*{width:100%}}
+
+
+/* Image-first homepage hero: let the UMS artwork take centre stage. */
+.imageOnlyHero{grid-template-columns:1fr;min-height:440px;padding:28px clamp(18px,5vw,72px);justify-items:center}
+.imageOnlyHero .heroArt{width:100%;min-height:390px;display:grid;place-items:center;position:relative;inset:auto;opacity:1}
+.imageOnlyHero .heroLogo{width:min(100%,460px);max-height:420px;object-fit:contain}
+@media(max-width:800px){
+  .imageOnlyHero{min-height:0;padding:20px 18px 28px}
+  .imageOnlyHero .heroArt{position:relative;right:auto;top:auto;width:100%;min-height:0;opacity:1}
+  .imageOnlyHero .heroLogo{width:min(100%,360px);max-height:none}
+}
