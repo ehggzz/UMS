@@ -184,3 +184,13 @@
 /* Achievement Finder: possible progression support */
 .supportDot.can{background:#ffd36a}
 .supportTag.can{border-color:#66512b;color:#ffd36a}
+
+/* UMS Events category tabs */
+.umsEventTabs{width:min(900px,calc(100% - 36px));margin:0 auto 50px}
+.umsEventTabList{display:flex;gap:10px;justify-content:center;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.umsEventTabList button{appearance:none;padding:11px 22px;border:1px solid #344135;border-radius:7px;background:#0c110d;color:#aab5a8;font:800 11px Inter,system-ui,sans-serif;cursor:pointer;transition:all .18s ease}
+.umsEventTabList button:hover{border-color:var(--orange);color:var(--bright)}
+.umsEventTabList button.active{border-color:var(--orange);background:var(--orange);color:#081006;box-shadow:0 0 18px rgba(141,255,34,.12)}
+.umsEventTabList button:focus-visible{outline:2px solid var(--bright);outline-offset:3px}
+.umsEventTabs .eventTbc{margin:0;width:100%}
+@media(max-width:600px){.umsEventTabs{width:calc(100% - 28px)}.umsEventTabList{justify-content:stretch}.umsEventTabList button{flex:1;padding:12px 10px}.umsEventTabs .eventTbc{padding:20px}}
