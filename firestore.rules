@@ -11,7 +11,7 @@ service cloud.firestore {
       // They cannot read orders, change their status, or delete them.
       allow create: if request.resource.data.keys().hasAll([
           "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
-          "quantity", "details", "contactDiscord", "status", "createdAt"
+          "quantity", "details", "contactDiscord", "paymentReference", "status", "createdAt"
         ])
         && request.resource.data.keys().hasOnly([
           "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
@@ -35,6 +35,8 @@ service cloud.firestore {
         && request.resource.data.details.size() <= 2000
         && request.resource.data.contactDiscord is string
         && request.resource.data.contactDiscord.size() <= 100
+        && request.resource.data.paymentReference is string
+        && request.resource.data.paymentReference.matches("^UMS-[A-Z0-9]{8}$")
         && request.resource.data.status == "pending_review"
         && request.resource.data.createdAt == request.time;
 
