@@ -23,9 +23,9 @@ export default function Home() {
       </a>
     </section>
     <section className="landingChoices landingChoicesSimple" aria-label="Explore UMS">
-      <a className="landingChoice" href="/services"><h2>Services</h2></a>
-      <a className="landingChoice" href="/events"><h2>UMS Events</h2></a>
-      <a className="landingChoice" href="/achievements"><h2>Award support</h2></a>
+      <a className="landingChoice simpleDestination" href="/services"><h2>Services</h2><p>Browse services, compare prices and request what you need.</p><span className="choiceArrow">Explore services ↗</span></a>
+      <a className="landingChoice simpleDestination" href="/events"><h2>UMS Events</h2><p>See upcoming events and what’s happening in the UMS community.</p><span className="choiceArrow">View events ↗</span></a>
+      <a className="landingChoice simpleDestination" href="/achievements"><h2>Award support</h2><p>Find awards you could work towards with help from UMS services.</p><span className="choiceArrow">Explore award support ↗</span></a>
     </section>
 
     <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a hand?</h2><p>Questions about a service, an event or your account? Reach the UMS team on Discord.</p></div><div className="contactActions"><a className="primaryButton" href="/services">View services ↑</a><a className="discordButton" href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Join the UMS Discord <span aria-hidden="true">↗</span></a></div></section>
