@@ -180,3 +180,7 @@
 @media(max-width:520px){.achievementFilters{grid-template-columns:1fr}.achievementLegend{gap:14px}.achievementFinder{width:calc(100% - 28px)}.achievementCardTop{gap:8px}.achievementCard h2{font-size:16px}}
 
 @media(min-width:1100px){.landingChoices{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Achievement Finder: possible progression support */
+.supportDot.can{background:#ffd36a}
+.supportTag.can{border-color:#66512b;color:#ffd36a}
