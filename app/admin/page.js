@@ -22,6 +22,7 @@ export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [orders, setOrders] = useState([]);
   const [instructions, setInstructions] = useState({});
+  const [recipients, setRecipients] = useState({});
   const [statusEdits, setStatusEdits] = useState({});
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
@@ -80,9 +81,11 @@ export default function AdminPage() {
     try {
       const nextStatus = statusEdits[order.id] || order.status;
       const paymentInstructions = instructions[order.id] ?? order.paymentInstructions ?? "";
+      const paymentRecipient = recipients[order.id] ?? order.paymentRecipient ?? "";
       await updateDoc(doc(db, "orders", order.id), {
         status: nextStatus,
         paymentInstructions,
+        paymentRecipient,
         updatedAt: new Date(),
       });
       setMessage("Order updated. Payment is only marked confirmed when you select that status manually.");
@@ -114,14 +117,15 @@ export default function AdminPage() {
         {error && <p className="formError" role="alert">{error}</p>}
         <div className="adminOrders">
           {orders.length === 0 ? <p className="emptyOrders">No orders loaded yet. Select “Refresh orders” to check the queue.</p> : orders.map((order) => <article className="adminOrder" key={order.id}>
-            <div className="adminOrderTop"><div><small>{order.id.slice(-8).toUpperCase()}</small><h2>{order.serviceTitle}</h2></div><span className={"statusPill status-" + order.status}>{(statuses.find(([value]) => value === order.status) || [order.status, order.status])[1]}</span></div>
+            <div className="adminOrderTop"><div><small>{order.paymentReference || ("UMS-" + order.id.slice(-8).toUpperCase())}</small><h2>{order.serviceTitle}</h2></div><span className={"statusPill status-" + order.status}>{(statuses.find(([value]) => value === order.status) || [order.status, order.status])[1]}</span></div>
             <p><strong>Player:</strong> {order.tornUsername}{order.tornId ? " (ID " + order.tornId + ")" : ""}</p>
             <p><strong>Plan:</strong> {order.plan}</p>
             <p><strong>Quantity:</strong> {order.quantity}</p>
             <p><strong>Discord:</strong> {order.contactDiscord}</p>
             {order.details && <p><strong>Details:</strong> {order.details}</p>}
             <label>Status<select value={statusEdits[order.id] ?? order.status} onChange={(event) => setStatusEdits((current) => ({ ...current, [order.id]: event.target.value }))}>{statuses.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>
-            <label>Payment instructions<textarea rows={3} value={instructions[order.id] ?? order.paymentInstructions ?? ""} onChange={(event) => setInstructions((current) => ({ ...current, [order.id]: event.target.value }))} placeholder="Add payment instructions after accepting the order." /></label>
+            <label>Payment recipient (Torn username / ID)<input value={recipients[order.id] ?? order.paymentRecipient ?? ""} onChange={(event) => setRecipients((current) => ({ ...current, [order.id]: event.target.value }))} placeholder="Who should receive the payment?" /></label>
+            <label>Payment instructions<textarea rows={3} value={instructions[order.id] ?? order.paymentInstructions ?? ""} onChange={(event) => setInstructions((current) => ({ ...current, [order.id]: event.target.value }))} placeholder="Amount to send and any other payment instructions. Customer must include the reference above in the transfer message." /></label>
             <button className="primaryButton" onClick={() => saveOrder(order)} disabled={busy}>Save order changes</button>
           </article>)}
         </div>
