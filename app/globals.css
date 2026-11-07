@@ -196,14 +196,14 @@
 @media(max-width:600px){.umsEventTabs{width:calc(100% - 28px)}.umsEventTabList{justify-content:stretch}.umsEventTabList button{flex:1;padding:12px 10px}.umsEventTabs .eventTbc{padding:20px}}
 
 
-/* Distinct member portal card — separate from service and event destinations. */
-.landingChoice.memberAreaChoice{position:relative;overflow:hidden;justify-content:flex-start;border:1px solid #36516a;border-top:2px solid #7cc9ff;background:radial-gradient(circle at 100% 0%,rgba(74,153,214,.2),transparent 48%),linear-gradient(145deg,#101a25,#0a1018 72%);box-shadow:inset 0 1px 0 rgba(190,225,255,.05)}
-.landingChoice.memberAreaChoice:after{content:"";position:absolute;width:190px;height:190px;right:-90px;bottom:-105px;border:1px solid rgba(124,201,255,.15);border-radius:50%;box-shadow:0 0 0 18px rgba(124,201,255,.025),0 0 0 38px rgba(124,201,255,.02);pointer-events:none}
+/* Member portal emphasis: same UMS green palette, stronger outline. */
+.landingChoice.memberAreaChoice{position:relative;overflow:hidden;justify-content:flex-start;border:2px solid var(--orange);border-top:4px solid var(--orange);background:radial-gradient(circle at 100% 0%,rgba(141,255,34,.13),transparent 48%),linear-gradient(145deg,#0e160e,#090e0a 72%);box-shadow:0 0 0 1px rgba(141,255,34,.12),0 0 24px rgba(141,255,34,.08),inset 0 1px 0 rgba(199,255,115,.06)}
+.landingChoice.memberAreaChoice:after{content:"";position:absolute;width:190px;height:190px;right:-90px;bottom:-105px;border:1px solid rgba(141,255,34,.18);border-radius:50%;box-shadow:0 0 0 18px rgba(141,255,34,.025),0 0 0 38px rgba(141,255,34,.02);pointer-events:none}
 .memberChoiceTop{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.memberChoiceTop .eyebrow{color:#9bd7ff;margin-bottom:14px}
-.memberChoiceIcon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px;border:1px solid rgba(124,201,255,.42);border-radius:50%;background:rgba(124,201,255,.09);color:#a8ddff;font-size:25px;line-height:1}
-.memberStatus{align-self:flex-start;margin:0 0 15px;padding:6px 9px;border:1px solid rgba(124,201,255,.3);border-radius:999px;background:rgba(124,201,255,.07);color:#a8ddff;font-size:8px;font-weight:900;letter-spacing:.1em}
-.landingChoice.memberAreaChoice h2 em{color:#8dccff}
-.landingChoice.memberAreaChoice .choiceArrow{color:#a8ddff}
-.landingChoice.memberAreaChoice:hover{border-color:#79bce9;background:radial-gradient(circle at 100% 0%,rgba(74,153,214,.25),transparent 50%),linear-gradient(145deg,#122131,#0a1018 72%)}
+.memberChoiceTop .eyebrow{color:var(--bright);margin-bottom:14px}
+.memberChoiceIcon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px;border:1px solid rgba(141,255,34,.48);border-radius:50%;background:rgba(141,255,34,.09);color:var(--bright);font-size:25px;line-height:1}
+.memberStatus{align-self:flex-start;margin:0 0 15px;padding:6px 9px;border:1px solid rgba(141,255,34,.34);border-radius:999px;background:rgba(141,255,34,.07);color:var(--bright);font-size:8px;font-weight:900;letter-spacing:.1em}
+.landingChoice.memberAreaChoice h2 em{color:var(--orange)}
+.landingChoice.memberAreaChoice .choiceArrow{color:var(--bright)}
+.landingChoice.memberAreaChoice:hover{border-color:var(--bright);background:radial-gradient(circle at 100% 0%,rgba(141,255,34,.18),transparent 50%),linear-gradient(145deg,#101a10,#090e0a 72%);box-shadow:0 0 0 1px rgba(199,255,115,.2),0 0 30px rgba(141,255,34,.12)}
 @media(max-width:800px){.landingChoice.memberAreaChoice{min-height:205px}}
