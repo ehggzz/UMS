@@ -104,7 +104,7 @@ export default function AchievementsPage() {
     <section className="achievementFinder" aria-label="Filter achievements">
       <div className="achievementFilters">
         <label>Support type<select value={support} onChange={e=>setSupport(e.target.value)}><option value="all">All support</option><option value="direct">Direct support</option><option value="indirect">Indirect support</option><option value="can">Can support</option></select></label>
-        <label>Achievement type<select value={type} onChange={e=>setType(e.target.value)}><option value="all">Medals &amp; honours</option><option value="Medal">Medals</option><option value="Honour">Honours</option></select></label>
+        <label>Achievement type<select value={type} onChange={e=>setType(e.target.value)}><option value="all">All awards</option><option value="Medal">Medals</option><option value="Honour">Honours</option><option value="Award">Other awards</option></select></label>
         <label>UMS service<select value={service} onChange={e=>setService(e.target.value)}>{serviceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>
         <label className="achievementSearch">Search<input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search achievements..." /></label>
       </div>
