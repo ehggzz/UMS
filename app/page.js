@@ -14,6 +14,14 @@ export default function Home() {
       </div>
     </section>
 
+    <section className="memberPortalSection" aria-label="Member account">
+      <a className="memberPortalCard" href="/account">
+        <div className="memberPortalHeading"><span className="eyebrow">YOUR MEMBER SPACE</span><span className="memberPortalIcon" aria-hidden="true">◎</span></div>
+        <span className="memberPortalStatus">MEMBER PORTAL · COMING SOON</span>
+        <h2>Your UMS account</h2>
+        <span className="memberPortalLink">Explore member area ↗</span>
+      </a>
+    </section>
     <section className="landingChoices landingChoicesSimple" aria-label="Explore UMS">
       <a className="landingChoice memberAreaChoice" href="/account"><div className="memberChoiceTop"><span className="eyebrow">YOUR MEMBER SPACE</span><span className="memberChoiceIcon" aria-hidden="true">◎</span></div><span className="memberStatus">MEMBER PORTAL · COMING SOON</span><h2>Your UMS account</h2><span className="choiceArrow">Explore member area ↗</span></a>
       <a className="landingChoice" href="/services"><h2>Services</h2></a>
