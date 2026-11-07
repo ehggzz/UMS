@@ -15,7 +15,7 @@ service cloud.firestore {
         ])
         && request.resource.data.keys().hasOnly([
           "serviceId", "serviceTitle", "plan", "tornUsername", "tornId",
-          "quantity", "details", "contactDiscord", "status", "createdAt"
+          "quantity", "details", "contactDiscord", "paymentReference", "status", "createdAt"
         ])
         && request.resource.data.serviceId is string
         && request.resource.data.serviceId.size() <= 80
