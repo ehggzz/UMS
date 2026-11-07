@@ -14,11 +14,10 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="landingChoices" aria-label="Explore UMS">
-      <a className="landingChoice memberAreaChoice" href="/account"><div className="memberChoiceTop"><span className="eyebrow">01 · YOUR MEMBER SPACE</span><span className="memberChoiceIcon" aria-hidden="true">◎</span></div><span className="memberStatus">MEMBER PORTAL · COMING SOON</span><h2>Your UMS <em>account.</em></h2><p>A personal space for your orders, account details and service activity. Sign-in and order tracking are in development.</p><span className="choiceArrow">Explore member area <span aria-hidden="true">↗</span></span></a>
-      <a className="landingChoice" href="/services"><span className="eyebrow">02 · PAID SERVICES</span><h2>Find your <em>service.</em></h2><p>Browse the full directory, compare prices and send a request.</p><span className="choiceArrow">Explore services ↗</span></a>
-      <a className="landingChoice" href="/events"><span className="eyebrow">03 · UMS EVENTS</span><h2>See what’s <em>coming up.</em></h2><p>Check confirmed events and read the details in one place.</p><span className="choiceArrow">View events ↗</span></a>
-      <a className="landingChoice" href="/achievements"><span className="eyebrow">04 · PROGRESSION</span><h2>Find your <em>next award.</em></h2><p>Explore medals and honours that UMS services may help you work towards.</p><span className="choiceArrow">Open Achievement Finder ↗</span></a>
+    <section className="landingChoices landingChoicesSimple" aria-label="Explore UMS">
+      <a className="landingChoice" href="/services"><h2>Services</h2></a>
+      <a className="landingChoice" href="/events"><h2>UMS Events</h2></a>
+      <a className="landingChoice" href="/achievements"><h2>Award support</h2></a>
     </section>
 
     <section className="contactPanel" id="contact"><div className="contactMark">UMS<span>.</span></div><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Need a hand?</h2><p>Questions about a service, an event or your account? Reach the UMS team on Discord.</p></div><div className="contactActions"><a className="primaryButton" href="/services">View services ↑</a><a className="discordButton" href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Join the UMS Discord <span aria-hidden="true">↗</span></a></div></section>
