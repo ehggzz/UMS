@@ -207,3 +207,10 @@
 .landingChoice.memberAreaChoice .choiceArrow{color:var(--bright)}
 .landingChoice.memberAreaChoice:hover{border-color:var(--bright);background:radial-gradient(circle at 100% 0%,rgba(141,255,34,.18),transparent 50%),linear-gradient(145deg,#101a10,#090e0a 72%);box-shadow:0 0 0 1px rgba(199,255,115,.2),0 0 30px rgba(141,255,34,.12)}
 @media(max-width:800px){.landingChoice.memberAreaChoice{min-height:205px}}
+
+
+/* Simplified homepage destination cards */
+.landingChoicesSimple .landingChoice{min-height:112px;justify-content:center;align-items:center;text-align:center;padding:24px}
+.landingChoicesSimple .landingChoice h2{margin:0;font-size:clamp(22px,3vw,30px);letter-spacing:-.035em}
+.landingChoicesSimple .landingChoice:hover{border-color:var(--orange);box-shadow:0 0 22px rgba(141,255,34,.07)}
+@media(max-width:800px){.landingChoicesSimple{padding-top:35px;padding-bottom:55px}.landingChoicesSimple .landingChoice{min-height:94px}}
