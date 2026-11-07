@@ -15,6 +15,7 @@ export default function Home() {
     </section>
 
     <section className="landingChoices landingChoicesSimple" aria-label="Explore UMS">
+      <a className="landingChoice memberAreaChoice" href="/account"><div className="memberChoiceTop"><span className="eyebrow">YOUR MEMBER SPACE</span><span className="memberChoiceIcon" aria-hidden="true">◎</span></div><span className="memberStatus">MEMBER PORTAL · COMING SOON</span><h2>Your UMS account</h2><span className="choiceArrow">Explore member area ↗</span></a>
       <a className="landingChoice" href="/services"><h2>Services</h2></a>
       <a className="landingChoice" href="/events"><h2>UMS Events</h2></a>
       <a className="landingChoice" href="/achievements"><h2>Award support</h2></a>
