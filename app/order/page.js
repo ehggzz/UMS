@@ -44,6 +44,13 @@ export default function OrderPage() {
     setPlan(selectedService.plans[0] || "");
   }, [serviceId]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  function createPaymentReference() {
+    const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    const bytes = new Uint8Array(8);
+    window.crypto.getRandomValues(bytes);
+    return "UMS-" + Array.from(bytes, (byte) => alphabet[byte % alphabet.length]).join("");
+  }
+
   async function submitOrder(event) {
     event.preventDefault();
     setError("");
@@ -58,6 +65,7 @@ export default function OrderPage() {
 
     setBusy(true);
     try {
+      const paymentReference = createPaymentReference();
       const doc = await addDoc(collection(db, "orders"), {
         serviceId,
         serviceTitle: selectedService.title,
@@ -67,10 +75,11 @@ export default function OrderPage() {
         quantity: Number(quantity),
         details: details.trim(),
         contactDiscord: contactDiscord.trim(),
+        paymentReference,
         status: "pending_review",
         createdAt: serverTimestamp(),
       });
-      setOrderRef("UMS-" + doc.id.slice(-8).toUpperCase());
+      setOrderRef(paymentReference);
     } catch (err) {
       console.error("UMS order submission failed", err);
       setError("We couldn't submit your request. Please try again in a moment or contact UMS on Discord.");
@@ -90,7 +99,7 @@ export default function OrderPage() {
         <h1>You're in the <em>queue.</em></h1>
         <p>Your request has been submitted for owner review. It is not yet accepted and no payment is due at this stage.</p>
         <div className="orderReference"><small>YOUR ORDER REFERENCE</small><strong>{orderRef}</strong></div>
-        <p>Keep this reference for your records. UMS will review the request and provide payment instructions if it is accepted.</p>
+        <p>Keep this reference. If your request is accepted, copy it into the message when you transfer your payment. UMS will send you the recipient and amount before you pay. Please do not send payment until you receive those instructions.</p>
         <Link className="primaryButton" href="/">Return to UMS ↗</Link>
       </> : <>
         <p className="eyebrow">UMS SERVICE REQUEST</p>
