@@ -7,7 +7,7 @@ export default function AccountPage() {
   return <main className="workflowPage accountPage">
     <header className="topbar">
       <a className="brand" href="/"><img src="/ums-logo.svg" alt="UMS — Unmatched Services" /><span>UNMATCHED<br/>SERVICES</span></a>
-      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/events">Events</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/achievements">Achievement Finder</a><a href="/events">Events</a><a href="https://discord.gg/EBXEkRPABG" target="_blank" rel="noopener noreferrer">Contact</a></nav>
       <a className="topCta" href="/services">Browse services <span>→</span></a>
     </header>
     <section className="accountIntro">
